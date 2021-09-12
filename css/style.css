@@ -19,6 +19,9 @@ a, a:visited, a:hover {
     color: inherit;
     text-decoration: none;
 }
+ul, li {
+    list-style: none;
+}
 /*<Bootstrap null settings>===================================================*/
 @media (min-width: 1200px) {
     .container {
@@ -34,7 +37,10 @@ a, a:visited, a:hover {
 .container-fluid {
     /*padding: 0;*/
 }
-.row, .navbar,.navbar-expand-lg, .navbar-nav, .nav-link, .col-md-3, .col-md-6, .col-md-5, .navbar-expand-lg, .navbar-nav, .nav-link, p, .navbar-brand, .carousel-caption, .col-lg-4,.col-sm-6, .col-xl-auto, .col-6 {
+.row, ul, li, p, h1, h2, h3, h4, h5,
+.navbar,.navbar-expand-lg, .navbar-nav, .nav-link, .navbar-expand-lg, .navbar-nav, .nav-link, .navbar-brand,
+.carousel-caption,
+.col-md-3, .col-md-6, .col-md-5,.col-lg-4,.col-sm-6, .col-xl-auto, .col-6, .col-lg-5, .col-lg-7, .col-lg-6 {
     margin: 0;
     padding: 0;
 }
@@ -50,7 +56,7 @@ a, a:visited, a:hover {
     display: flex;
     flex-direction: column;
 }
-/*<HEADER>======================================================================*/
+/*<HEADER>==================================================================*/
 .header {
     margin-bottom: 97px;
 }
@@ -125,7 +131,7 @@ a, a:visited, a:hover {
     right: 0;
     width: 100%;
 }
-/*===================*/
+/*<HEADER-bottom>===============*/
 .header__bottom {
     position: relative;
 }
@@ -175,7 +181,7 @@ a, a:visited, a:hover {
     padding-left: calc(2px + (19 - 2)*((100vw - 320px)/(1920 - 320)));
     padding-right: calc(2px + (19 - 2)*((100vw - 320px)/(1920 - 320)));
 }
-/*===================*/
+/*<HEADER-slider>============*/
 .header-slider__navigation {
     opacity: 1;
     justify-content: flex-start;
@@ -186,17 +192,23 @@ a, a:visited, a:hover {
     justify-content: flex-end;
     padding-right: 10px;
 }
-.header-slider__nav-background {
+.navigation-item__background {
+    display: block;
     height: calc(20px + (40 - 20)*((100vw - 320px)/(1920 - 320)));
     width: calc(20px + (41 - 20)*((100vw - 320px)/(1920 - 320)));
     background-color: #00aba9;
     padding: calc(2px + (11 - 2)*((100vw - 320px)/(1920 - 320)));
+    transition: all 0.5s ease 0s;
 }
-.header-slider__nav-item {
+.navigation-item__background:hover {
+    background-color: #008287;
+}
+.navigation-item__ico {
     vertical-align: middle;
     height: 100%;
 }
-/*<COMMON>========================================================================*/
+/*<COMMON>=====================================================================*/
+/*<COMMON-titles>==============*/
 .title {
     font-family: 'Advent Pro', sans-serif;
     font-size: calc(19px + (38 - 19)*((100vw - 320px)/(1920 - 320)));
@@ -232,6 +244,10 @@ a, a:visited, a:hover {
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 0;
+    transition: color 0.5s ease 0s;
+}
+.subtitle-news:hover {
+    color: #a7d2cb;
 }
 .subtitle-date {
     font-family: 'Advent Pro', sans-serif;
@@ -241,7 +257,7 @@ a, a:visited, a:hover {
     text-transform: uppercase;
     margin-bottom: 0;
 }
-/*===================*/
+/*<COMMON-text>================*/
 .text {
     color: #555555;
     font-size: calc(14px + (20 - 14)*((100vw - 320px)/(1920 - 320)));
@@ -249,6 +265,7 @@ a, a:visited, a:hover {
     line-height: 28px;
     text-align: center;
     padding: 0 10px;
+    transition: color 0.5s ease 0s;
 }
 .text-white {
     color: #ffffff;
@@ -259,8 +276,15 @@ a, a:visited, a:hover {
     font-weight: 400;
     line-height: 20px;
     text-align: left;
+    transition: color 0.5s ease 0s;
 }
-/*===================*/
+.about__title-info .text:hover{
+    color: #c0bfbf;
+}
+.block-text:hover {
+    color: #a7d2cb;
+}
+/*<COMMON-decoration-items>========*/
 .decoration {
     width: 100%;
     size: 1px;
@@ -271,7 +295,7 @@ a, a:visited, a:hover {
 .decoration-white {
     background-color: #ffffff;
 }
-/*===================*/
+/*<COMMON-background-items>=========*/
 .date-background {
     background-color: rgba(0, 130, 135, 0.7);
     padding: 4px 15px 2px;
@@ -291,7 +315,7 @@ a, a:visited, a:hover {
     width: 100%;
     padding: 6px 15px 7px;
 }
-/*<MAIN>========================================================================*/
+/*<ABOUT_BLOCK>==================================================================*/
 .about {
     margin-bottom: 100px;
 }
@@ -309,7 +333,7 @@ a, a:visited, a:hover {
         height: auto;
     }
 }*/
-/*<MAIN>========================================================================*/
+/*<SERVICES_BLOCK>>=============================================================*/
 .services {
     margin-bottom: 91px;
 }
@@ -358,9 +382,9 @@ a, a:visited, a:hover {
         height: auto;
     }
 }*/
-/*==============================================================================*/
+/*<NEWS_BLOCK>==============================================================*/
 .news {
-    margin-bottom: 100px;
+    margin-bottom: 82px;
 }
 .news__title-info {
     margin-bottom: 48px;
@@ -376,12 +400,12 @@ a, a:visited, a:hover {
     padding: 0 9px;
     margin-bottom: 18px;
 }
-/*==========================*/
+/*<NEWS_BLOCK-main-column>==========*/
 .news__main {
     height: 100%;
 }
 .news-main__image {
-    background-image: url("../img/news/news_main.jpg");
+    background-image: url("../img/block4-news/news_main.jpg");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -401,7 +425,7 @@ a, a:visited, a:hover {
     overflow: hidden;
     max-width: 535px;
 }
-/*==========================*/
+/*<NEWS_BLOCK-old-column>===========*/
 .news__old {
     height: 100%;
     margin: -9px;
@@ -417,29 +441,105 @@ a, a:visited, a:hover {
     min-height: 183px;
 }
 .news-old__image-1 {
-    background-image: url("../img/news/news-1.jpg");
+    background-image: url("../img/block4-news/news-1.jpg");
 }
 .news-old__image-2 {
-    background-image: url("../img/news/news-2.jpg");
+    background-image: url("../img/block4-news/news-2.jpg");
 }
 .news-old__image-3 {
-    background-image: url("../img/news/news-3.jpg");
+    background-image: url("../img/block4-news/news-3.jpg");
 }
 .news-old__image-4 {
-    background-image: url("../img/news/news-4.jpg");
+    background-image: url("../img/block4-news/news-4.jpg");
 }
 .news-old__wrapper {
     padding-bottom: 10px;
 }
-/*==============================================================================*/
+.news-old__link{
+    display: block;
+    width: 100%;
+}
+/*<CONTACTS_BLOCK>========================================================*/
+.contacts {
+    position: relative;
+}
+.contacts__background {
+    background-image: url("../img/block5-contacts/contacts-bg-image.jpg");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 90px 100px;
+}
+.contacts__text{
+    padding-top: 6px;
+}
+.contacts__title-info {
+    margin-bottom: 43px;
+}
+.contacts__row {
+    margin: 0 -9px;
+}
+.contacts__column {
+    padding: 0 9px;
+}
+.contacts__column-small{
+}
+.contacts__map {
+    /*height: 100%;*/
+    height: 208px;
+}
+.contacts__title-small {
+    font-size: calc(18px + (24 - 18)*((100vw - 320px)/(1920 - 320)));
+    font-weight: 400;
+    text-align: left;
+}
+.contacts__decoration-small{
+    margin-top: 10px;
+}
+.address__item {
+    font-size: calc(15px + (18 - 15)*((100vw - 320px)/(1920 - 320)));
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+}
+.contact-information__item {
+    font-size: calc(15px + (16 - 15)*((100vw - 320px)/(1920 - 320)));
+    font-weight: 400;
+    line-height: 24px;
+    text-align: right;
+    transition: color 0.5s ease 0s;
+}
+.contact-information__item:last-child {
+    text-decoration: underline;
+}
+.contact-information__item:hover {
+    color: #a7d2cb;
+}
+
+.contacts__to-top-link {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.contacts__to-top-background{
+}
+.contacts__to-top-link .carousel-control-next-icon {
+    transform: rotate(-90deg);
+}
+/*<MEDIA>=====================================================================*/
 @media (max-width: 1200px) {
-    .header, .about, .services, .news /*.contacts*/{
+    .header, .about, .services {
         margin-bottom: calc(40px + (90 - 40)*((100vw - 320px)/(1920 - 320)));
     }
-    .services__wrapper {
+    .news {
+        margin-bottom: calc(32px + (82 - 32)*((100vw - 320px)/(1920 - 320)));
+    }
+    .services__wrapper, .contacts__background {
         padding: 30px 0 30px;
     }
     .news__title-info {
         margin-bottom: 40px;
     }
 }
+/*============================================================================*/
