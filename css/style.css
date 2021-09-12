@@ -97,11 +97,11 @@ ul, li {
     margin: 0 23px;
     font-size: calc(19px + (24 - 19)*((100vw - 320px)/(1920 - 320)));
 }
-.menu__link {
+.menu__link  {
     position: relative;
     transition: all 0.5s ease 0s;
 }
-.menu__link:hover {
+.navbar-dark .navbar-nav .nav-link:hover {
     color: #008287;
 }
 .menu__link::after {
