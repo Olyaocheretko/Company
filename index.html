@@ -191,8 +191,8 @@
 							</div>
 						</div>
 						<div class="news__column col-lg-6">
-							<div class="news__old news-old row">
-								<div class="news-old__item col-sm-6">
+							<div class="news__old news-old row row-cols-2">
+								<div class="news-old__item col-6">
 									<div class="news-old__image news-old__image-1">
 										<div class="news-old__wrapper">
 											<div class="news-old__column date-background">
@@ -206,7 +206,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="news-old__item col-sm-6">
+								<div class="news-old__item col-6">
 									<div class="news-old__image news-old__image-2">
 										<div class="news-old__wrapper">
 											<div class="news-old__column date-background">
@@ -220,7 +220,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="news-old__item col-sm-6">
+								<div class="news-old__item col-6">
 									<div class="news-old__image news-old__image-3">
 										<div class="news-old__wrapper">
 											<div class="news-old__column date-background">
@@ -234,7 +234,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="news-old__item col-sm-6">
+								<div class="news-old__item col-6">
 									<div class="news-old__image news-old__image-4">
 										<div class="news-old__wrapper">
 											<div class="news-old__column date-background">
@@ -265,8 +265,10 @@
 					</div>
 					<div class="contacts__body">
 						<div class="contacts__row row">
-							<div class="contacts__column col-lg-7">
-								<div class="contacts__map" id="map"></div>
+							<div class="contacts__column pb-4 pb-lg-0 col-lg-7">
+								<div id="map-container-google-7" class="z-depth-1-half map-container-7">
+									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2484.3641846850514!2d-0.16706048423073763!3d51.48818407963205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4876056caf1ba1c3%3A0x61f5ff0f3c5c7efa!2zMTMgUmFkbm9yIFdhbGssIExvbmRvbiBTVzMgM1NSLCDQktC10LvQuNC60L7QsdGA0LjRgtCw0L3QuNGP!5e0!3m2!1sru!2sua!4v1631458144615!5m2!1sru!2sua" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+								</div>
 							</div>
 							<div class="contacts__column col-lg-5">
 								<h4 class="contacts__title-small">Company Name</h4>
@@ -306,9 +308,27 @@
 		</section>
 	</main>
 	<footer class="footer">
-		<div class="footer__background container-fluid">
+		<div class="footer__background container-fluid d-flex align-items-center pt-lg-2">
 			<div class="footer__content container">
-
+				<div class="footer__row row justify-content-lg-between">
+					<div class="footer__column col-lg-4 d-flex justify-content-center justify-content-lg-start">
+						<a class="footer__logo menu__logo menu__logo-small" href="#">Company <strong class="menu__logo-green">Name</strong></a>
+						<a class="footer__text footer__link" href="#"><span class="footer__link-decoration">|</span>Terms</a>
+						<a class="footer__text footer__link" href="#"><span class="footer__link-decoration">|</span>Privacy</a>
+					</div>
+					<div class="footer__column col-lg-4 d-flex justify-content-center p-4 p-lg-0 pb-lg-1">
+						<div class="footer__icons d-flex">
+							<a href="#" class="footer__icon"><img src="img/block6-footer/facebook.svg" alt="Fb"></a>
+							<a href="#" class="footer__icon"><img src="img/block6-footer/twitter.svg" alt="Twitter"></a>
+							<a href="#" class="footer__icon"><img src="img/block6-footer/youtube.svg" alt="YouTube"></a>
+							<a href="#" class="footer__icon"><img src="img/block6-footer/instagram.svg" alt="Instagram"></a>
+							<a href="#" class="footer__icon"><img src="img/block6-footer/pinterest.svg" alt="Pinterest"></a>
+						</div>
+					</div>
+					<div class="footer__column col-lg-4 d-flex justify-content-center justify-content-lg-end">
+						<p class="footer__text text-center">Copyright © 2013 <strong class="footer__text-green">Company Name</strong>. All rights reserved.</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</footer>
@@ -316,8 +336,6 @@
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 	<script src="js/bootstrap.min.js"></script>
-	<!-- Api key required for the map-->
-	<script src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap"></script>
 	<script src="js/script.js"></script>
 </body>
 </html>
