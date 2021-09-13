@@ -194,6 +194,10 @@ ul, li {
     height: 100%;
 }
 /*<COMMON>=====================================================================*/
+hr {
+    margin-top: calc(12px + (16 - 12)*((100vw - 320px)/(1920 - 320)));
+    margin-bottom: calc(12px + (16 - 12)*((100vw - 320px)/(1920 - 320)));
+}
 .menu__logo {
     font-family: 'Advent Pro', sans-serif;
     font-size: calc(24px + (34 - 24)*((100vw - 320px)/(1920 - 320)));
@@ -344,13 +348,13 @@ ul, li {
     padding-bottom: calc(30px + (63 - 30)*((100vw - 320px)/(1920 - 320)));
 }
 .services__title-info {
-   margin-bottom: 40px;
+   margin-bottom: calc(20px + (40 - 20)*((100vw - 320px)/(1920 - 320)));
 }
 .services__text{
     padding-top: 6px;
 }
 .services__item {
-    margin-bottom: 42px;
+    margin-bottom: calc(20px + (42 - 20)*((100vw - 320px)/(1920 - 320)));
     margin-right: calc(2px + (10 - 2)*((100vw - 320px)/(1920 - 320)));
 }
 .services__item:last-child {
@@ -375,7 +379,7 @@ ul, li {
     margin-bottom: 82px;
 }
 .news__title-info {
-    margin-bottom: calc(40px + (48 - 40)*((100vw - 320px)/(1920 - 320)));
+    margin-bottom: calc(20px + (48 - 20)*((100vw - 320px)/(1920 - 320)));
 }
 .news__text {
     padding-top: 3px;
@@ -493,7 +497,7 @@ ul, li {
     position:absolute;
 }
 .contacts__title-small {
-    font-size: calc(16px + (24 - 16)*((100vw - 320px)/(1920 - 320)));
+    font-size: calc(15px + (24 - 15)*((100vw - 320px)/(1920 - 320)));
     font-weight: 400;
     text-align: left;
 }
