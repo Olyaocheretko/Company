@@ -7,6 +7,7 @@ html,body {
     margin: 0;
     padding: 0;
     position:relative;
+    scroll-behavior: smooth;
 }
 body {
     line-height: 1px;
@@ -30,47 +31,36 @@ ul, li {
     flex-direction: column;
 }
 /*<Bootstrap null settings>===================================================*/
-.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-toggler {
-    color: #FFFFFF;
-    border-color: #FFFFFF;
-}
 .container {
     max-width: 1200px;
     width: 100%;
 }
 .row, ul, li, p, h1, h2, h3, h4, h5,
-.navbar,.navbar-expand-lg, .navbar-nav, .nav-link, .navbar-expand-lg, .navbar-nav, .nav-link, .navbar-brand,.carousel-caption,[class*="col-"],.col {
+.navbar-expand-lg, .carousel-caption,[class*="col-"],.col {
     margin: 0;
     padding: 0;
 }
-/*TODO. Temporary. To hide active menu items when burger appears*/
-@media (max-width: 991px) {
-    .navbar-dark .navbar-nav .nav-link {
-        opacity: 0;
-    }
+.navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-toggler {
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }
 @media (min-width: 992px){
-    .navbar-expand-lg .navbar-nav .nav-link {
+    .navbar-expand-lg .navbar-nav .nav-link,
+    .navbar-brand {
         padding: 0;
     }
 }
 /*<HEADER>==================================================================*/
 .header {
     margin-bottom: 97px;
-}
-.header__top {
-    height: 80px;
     background-color: #000000;
 }
-.header__menu {
-    padding-top: 12px;
-}
-.menu {
-    display: flex;
-    justify-content: space-between;
+.navbar {
+    padding: 12px 0 14px;
     line-height: normal;
+    z-index: 20;
 }
-.menu__logo-bottom {
+.navbar-brand-bottom {
     font-size: calc(10px + (14 - 10)*((100vw - 320px)/(1920 - 320)));
     text-align: left;
     text-transform: uppercase;
@@ -78,17 +68,10 @@ ul, li {
     margin-top: -6px;
     padding-left: 1px;
 }
-.menu__burger {
-}
-.menu__wrapper {
-    display: flex;
-    justify-content: flex-end;
-    align-self: flex-end;
-}
-.menu__list {
+.navbar-nav {
     margin: 0 -23px;
 }
-.menu__item {
+.nav-item {
     color: #e5e5e5;
     font-family: 'Advent Pro', sans-serif;
     font-weight: 700;
@@ -97,14 +80,14 @@ ul, li {
     margin: 0 23px;
     font-size: calc(19px + (24 - 19)*((100vw - 320px)/(1920 - 320)));
 }
-.menu__link  {
-    position: relative;
-    transition: all 0.5s ease 0s;
-}
 .navbar-dark .navbar-nav .nav-link:hover {
     color: #008287;
 }
-.menu__link::after {
+.nav-link {
+    position: relative;
+    transition: all 0.5s ease 0s;
+}
+.nav-link::after {
     content: '';
     position: absolute;
     right: 50%;
@@ -114,7 +97,7 @@ ul, li {
     bottom: -3px;
     transition: all 0.8s ease 0s;
  }
-.menu__link:hover::after {
+.nav-link:hover::after {
     right: 0;
     width: 100%;
 }
@@ -348,7 +331,7 @@ hr {
     padding-bottom: calc(30px + (63 - 30)*((100vw - 320px)/(1920 - 320)));
 }
 .services__title-info {
-   margin-bottom: calc(20px + (40 - 20)*((100vw - 320px)/(1920 - 320)));
+    margin-bottom: calc(20px + (40 - 20)*((100vw - 320px)/(1920 - 320)));
 }
 .services__text{
     padding-top: 6px;
@@ -385,7 +368,7 @@ hr {
     padding-top: 3px;
 }
 .news__body {
-   margin: 0 -9px;
+    margin: 0 -9px;
 }
 .news__column {
     min-height: calc(250px + (385 - 250)*((100vw - 320px)/(1920 - 320)));
@@ -580,6 +563,17 @@ hr {
     font-weight: 600;
 }
 /*<MEDIA>=====================================================================*/
+@media (max-width: 991px){
+    .navbar-nav {
+        padding: 15px 5px;
+    }
+    .nav-link {
+        padding-top: 10px
+    }
+    .nav-link:hover::after {
+        width: 0;
+    }
+}
 @media (max-width: 1200px) {
     .header, .about, .services {
         margin-bottom: calc(40px + (90 - 40)*((100vw - 320px)/(1920 - 320)));
