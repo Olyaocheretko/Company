@@ -36,19 +36,15 @@ ul, li {
     width: 100%;
 }
 .row, ul, li, p, h1, h2, h3, h4, h5,
-.navbar-expand-lg, .carousel-caption,[class*="col-"],.col {
+.navbar-expand-lg, .carousel-caption,[class*="col-"],.col,
+.navbar-expand-lg .navbar-nav .nav-link,
+.navbar-brand {
     margin: 0;
     padding: 0;
 }
 .navbar-dark .navbar-nav .nav-link, .navbar-dark .navbar-toggler {
     color: #FFFFFF;
     border-color: #FFFFFF;
-}
-@media (min-width: 992px){
-    .navbar-expand-lg .navbar-nav .nav-link,
-    .navbar-brand {
-        padding: 0;
-    }
 }
 /*<HEADER>==================================================================*/
 .header {
@@ -565,13 +561,17 @@ hr {
 /*<MEDIA>=====================================================================*/
 @media (max-width: 991px){
     .navbar-nav {
-        padding: 15px 5px;
+        padding-top: 15px;
     }
-    .nav-link {
-        padding-top: 10px
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding: 10px
     }
     .nav-link:hover::after {
         width: 0;
+    }
+    #about, #services, #news, #contacts {
+        padding-top: calc(183px + (195 - 183)*((100vw - 320px)/(991 - 320)));
+        margin-top: calc(-183px + (-195 - (-183))*((100vw - 320px)/(991 - 320)));
     }
 }
 @media (max-width: 1200px) {
