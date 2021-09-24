@@ -126,9 +126,6 @@ ul, li, p,
     text-align: center;
     transition: color 0.5s ease 0s;
 }
-.text:hover {
-    color: #69d3d9;
-}
 .text-white {
     color: #ffffff;
 }
@@ -320,6 +317,10 @@ ul, li, p,
 }
 .about__text {
     padding-top: 3px;
+    transition: color 0.5s ease 0s;
+}
+.about__text:hover {
+    color: #69d3d9;
 }
 .about__link {
     display: block;
