@@ -10,7 +10,9 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <div class="wrapper">
+
 	<header class="header">
 		<div class="header__top container">
 			<nav class="header__menu navbar navbar-dark navbar-expand-lg">
@@ -41,8 +43,8 @@
 		</div>
 		<div class="header__slider header-slider">
 			<div id="header-slider" class="header-slider__body carousel slide carousel-fade" data-ride="carousel">
-				<div class="carousel-inner">
-					<div class="carousel-item active">
+				<div class="carousel__wrapper carousel-inner">
+					<div class="carousel__img carousel-item active" id="mainSliderImage">
 						<img class="carousel__image d-block" src="img/block1-header/header__slider-image-1.jpg" alt="Our company">
 						<!--if need to use "overlay" copy to other carousel-item block-->
 						<img class="carousel__overlay d-block" src="img/block1-header/header__overlay.png" alt="Overlay">
@@ -50,7 +52,7 @@
 							<h1 class="carousel__title">The best <span class="carousel__title-green">solutions</span> starts here!</h1>
 						</div>
 					</div>
-					<div class="carousel-item">
+					<div class="carousel__img carousel-item carousel-item--additional">
 						<img class="carousel__image d-block" src="img/block1-header/header__slider-image-1.jpg" alt="Solutions">
 					</div>
 				</div>
@@ -330,15 +332,25 @@
 					</div>
 					<div class="footer__column col-lg-2 d-flex justify-content-center p-3 p-lg-0">
 						<div class="footer__icons d-flex">
-							<a href="#" class="footer__icon"><img src="img/block6-footer/facebook.jpg" alt="Fb"></a>
-							<a href="#" class="footer__icon"><img src="img/block6-footer/twitter.jpg" alt="Twitter"></a>
-							<a href="#" class="footer__icon"><img src="img/block6-footer/youtube.jpg" alt="YouTube"></a>
-							<a href="#" class="footer__icon"><img src="img/block6-footer/instagram.jpg" alt="Instagram"></a>
-							<a href="#" class="footer__icon"><img src="img/block6-footer/pinterest.jpg" alt="Pinterest"></a>
+							<div class="footer__icon">
+								<a href="#"><span class="footer__image footer__image--fb"></span></a>
+							</div>
+							<div class="footer__icon">
+								<a href="#"><span class="footer__image footer__image--twitter"></span></a>
+							</div>
+							<div class="footer__icon">
+								<a href="#"><span class="footer__image  footer__image--youtube"></span></a>
+							</div>
+							<div class="footer__icon">
+								<a href="#"><span class="footer__image footer__image--instagram"></span></a>
+							</div>
+							<div class="footer__icon">
+								<a href="#"><span class="footer__image footer__image--pinterest"></span></a>
+							</div>
 						</div>
 					</div>
 					<div class="footer__column col-lg-4 d-flex text-center justify-content-center justify-content-lg-end">
-						<p class="footer__text text-center">Copyright © 2013 <strong class="footer__text-green">Company Name</strong>. All rights reserved.</p>
+						<p class="footer__text text-center">Copyright © 2013 <a href="#"><strong class="footer__text-green">Company Name</strong></a>. All rights reserved.</p>
 					</div>
 				</div>
 			</div>

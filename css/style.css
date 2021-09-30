@@ -23,7 +23,11 @@ ul, li {
     display: flex;
     flex-direction: column;
 }
-/*<Bootstrap null settings>===================================================*/
+:focus, :active, a:focus, a:active {
+    outline: none;
+}
+
+/*<BOOTSTRAP null settings>===================================================*/
 .container {
     max-width: 1200px;
     width: 100%;
@@ -48,6 +52,7 @@ ul, li, p,
     color: #FFFFFF;
     border-color: #FFFFFF;
 }
+
 /*<COMMON styles>=====================================================================*/
 .logo {
     font-family: 'Advent Pro', sans-serif;
@@ -176,6 +181,7 @@ ul, li, p,
     max-height: 115px;
     overflow: hidden;
 }
+
 /*<HEADER>==================================================================*/
 .header {
     margin-bottom: 97px;
@@ -276,7 +282,7 @@ ul, li, p,
 .carousel__title-green {
     color: #ffffff;
     font-weight: 700;
-    background: linear-gradient(to top, transparent 3%, #008287 3% 97%, transparent 96%);
+    background: linear-gradient(to top, transparent 3%, #008287 3% 96%, transparent 96%);
     padding-left: calc(2px + (19 - 2)*((100vw - 320px)/(1920 - 320)));
     padding-right: calc(2px + (17 - 2)*((100vw - 320px)/(1920 - 320)));
     margin-right: 4px;
@@ -290,7 +296,7 @@ ul, li, p,
     justify-content: flex-start;
 }
 .carousel-control-next {
-   padding-right: calc(15px + (10 - 15)*((100vw - 320px)/(1920 - 320)));
+    padding-right: calc(15px + (10 - 15)*((100vw - 320px)/(1920 - 320)));
     justify-content: flex-end;
 }
 .carousel-control__background {
@@ -308,6 +314,7 @@ ul, li, p,
 .carousel-control-next-icon, .carousel-control-prev-icon {
     width: 16px;
 }
+
 /*<ABOUT_BLOCK>==================================================================*/
 .about {
     margin-bottom: 100px;
@@ -327,6 +334,7 @@ ul, li, p,
     height: calc(80px + (110 - 80)*((100vw - 320px)/(1920 - 320)));
     overflow: hidden;
 }
+
 /*<SERVICES_BLOCK>>=============================================================*/
 .services {
     margin-bottom: 91px;
@@ -356,6 +364,7 @@ ul, li, p,
     padding-top: calc(0px + (8 - 0)*((100vw - 320px)/(1920 - 320)));
     padding-right: 0;
 }
+
 /*<NEWS_BLOCK>==============================================================*/
 .news {
     margin-bottom: 82px;
@@ -423,6 +432,7 @@ ul, li, p,
     padding-bottom: 10px;
     overflow: hidden;
 }
+
 /*<CONTACTS_BLOCK>========================================================*/
 .contacts {
     position: relative;
@@ -504,6 +514,7 @@ ul, li, p,
     transform: rotate(-90deg);
     margin: 0 auto;
 }
+
 /*<FOOTER>========================================================*/
 .footer {
     position: relative;
@@ -557,11 +568,39 @@ ul, li, p,
     padding-right: calc(10px + (2.5 - 10)*((100vw - 320px)/(1920 - 320)));
     padding-left: calc(10px + (2.5 - 10)*((100vw - 320px)/(1920 - 320)));
 }
+.footer__image {
+    display: block;
+    height: 25px;
+    width: 25px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+.footer__image--fb {
+    background-image: url("../img/block6-footer/facebook.jpg");
+}
+.footer__image--twitter {
+    background-image: url("../img/block6-footer/twitter.jpg");
+}
+.footer__image--youtube {
+    background-image: url("../img/block6-footer/youtube.jpg");
+}
+.footer__image--instagram {
+    background-image: url("../img/block6-footer/instagram.jpg");
+}
+.footer__image--pinterest {
+    background-image: url("../img/block6-footer/pinterest.jpg");
+}
 /*<Footer-column3>===========*/
 .footer__text-green {
     color: #008287;
     font-weight: 600;
+    transition: color 0.5s ease 0s;
 }
+.footer__text-green:hover {
+    color: #69d3d9;
+}
+
 /*<MEDIA>=====================================================================*/
 @media (max-width: 991px) {
     .navbar-nav {
