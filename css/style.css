@@ -23,7 +23,8 @@ ul, li {
     display: flex;
     flex-direction: column;
 }
-:focus, :active, a:focus, a:active {
+:focus, :active, a:focus, a:active,
+.navbar-toggler:focus, .navbar-toggler:active {
     outline: none;
 }
 
