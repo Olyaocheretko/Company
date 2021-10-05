@@ -142,9 +142,6 @@ ul, li, p,
     text-align: left;
     transition: color 0.5s ease 0s;
 }
-.text-white-small:hover {
-    color: #69d3d9;
-}
 /*==============*/
 .decoration {
     margin-top: calc(12px + (16 - 12)*((100vw - 320px)/(1920 - 320)));
@@ -178,7 +175,7 @@ ul, li, p,
 .subtitle-background--black {
     background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    padding: 6px 15px 7px;
+    padding: 6px 15px 6px;
     max-height: 115px;
     overflow: hidden;
 }
@@ -318,24 +315,21 @@ ul, li, p,
 
 /*<ABOUT_BLOCK>==================================================================*/
 .about {
-    margin-bottom: 100px;
+    margin-bottom: 104px;
 }
 .about__title {
     padding-right: 2px;
 }
+.about__decoration {
+    margin-top: calc(12px + (14 - 12)*((100vw - 320px)/(1920 - 320)));
+    margin-bottom: calc(12px + (16 - 12)*((100vw - 320px)/(1920 - 320)));
+}
 .about__text {
     padding-top: 3px;
     transition: color 0.5s ease 0s;
-}
-.about__text:hover {
-    color: #69d3d9;
-}
-.about__link {
-    display: block;
     height: calc(80px + (110 - 80)*((100vw - 320px)/(1920 - 320)));
     overflow: hidden;
 }
-
 /*<SERVICES_BLOCK>>=============================================================*/
 .services {
     margin-bottom: 91px;
@@ -357,15 +351,40 @@ ul, li, p,
     padding-top: 6px;
 }
 .services__column {
-    max-height: calc(80px + (94 - 80)*((100vw - 320px)/(1920 - 320)));
-    overflow: hidden;
     margin-bottom: calc(20px + (42 - 20)*((100vw - 320px)/(1920 - 320)));
 }
 .service-card__img {
-    padding-top: calc(0px + (8 - 0)*((100vw - 320px)/(1920 - 320)));
-    padding-right: 0;
+    margin-top: calc(0px + (8 - 0)*((100vw - 320px)/(1920 - 320)));
+    margin-bottom: calc(0px + (5 - 0)*((100vw - 320px)/(1920 - 320)));
 }
-
+.service-card__background {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 100%;
+    max-width: 81px;
+}
+.service-card__background-1 {
+    background-image: url("../img/block3-services/services-item-1.png");
+}
+.service-card__background-2 {
+    background-image: url("../img/block3-services/services-item-2.png");
+}
+.service-card__background-3 {
+    background-image: url("../img/block3-services/services-item-3.png");
+}
+.service-card__background-4 {
+    background-image: url("../img/block3-services/services-item-4.png");
+}
+.service-card__background-5 {
+    background-image: url("../img/block3-services/services-item-5.png");
+}
+.service-card__background-6 {
+    background-image: url("../img/block3-services/services-item-6.png");
+}
+.service-card__body {
+    max-height: calc(80px + (94 - 80)*((100vw - 320px)/(1920 - 320)));
+    overflow: hidden;
+}
 /*<NEWS_BLOCK>==============================================================*/
 .news {
     margin-bottom: 82px;
@@ -378,6 +397,9 @@ ul, li, p,
 }
 .news__text {
     padding-top: 3px;
+}
+.news__decoration {
+    margin-top: calc(12px + (15 - 12)*((100vw - 320px)/(1920 - 320)));
 }
 .news__column {
     min-height: calc(250px + (385 - 250)*((100vw - 320px)/(1920 - 320)));
@@ -481,7 +503,7 @@ ul, li, p,
     text-align: left;
 }
 .contacts__decoration-small {
-    margin-top: 10px;
+    margin-top: 9px;
     margin-bottom: calc(12px + (15 - 12)*((100vw - 320px)/(1920 - 320)));
 }
 .address__item {
@@ -616,6 +638,9 @@ ul, li, p,
     #about, #services, #news, #contacts {
         padding-top: calc(183px + (195 - 183)*((100vw - 320px)/(991 - 320)));
         margin-top: calc(-183px + (-195 - (-183))*((100vw - 320px)/(991 - 320)));
+    }
+    .service-card__background {
+       background-size: 90%;
     }
 }
 @media (max-width: 1200px) {
